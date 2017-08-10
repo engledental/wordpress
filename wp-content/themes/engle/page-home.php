@@ -20,17 +20,18 @@
 
 </section>
 
-<section class="home-perform">
+<section class="home-intro">
 	<div class="container">
 
-		<h2 class="section-title">Engineered to Perform</h2>
+		<h2 class="section-title"><?php the_field('intro_title'); ?></h2>
 
-		<?php if( have_rows('hero_benefits') ): ?>
-			<div class="home-perform__grid flex-grid">
-		    <?php while ( have_rows('hero_benefits') ) : the_row(); ?>
-					<div class="home-perform__grid--usa col-1-3">
-						<div class="home-perform__icon">
-			      	<?php the_sub_field('benefit'); ?>
+		<?php if( have_rows('intro_content_columns') ): ?>
+			<div class="home-intro__grid flex-grid">
+		    <?php while ( have_rows('intro_content_columns') ) : the_row(); ?>
+					<div class="home-intro__grid--usa col-1-3">
+						<div class="home-intro__icon">
+							<?php $image = get_sub_field('icon'); ?>
+			      	<img src="<?php echo $image['url']; ?>" alt="" />
 						</div>
 						<h3 class="title__h3"><?php the_sub_field('title'); ?></h3>
 						<p><?php the_sub_field('content'); ?></p>

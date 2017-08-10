@@ -18,7 +18,7 @@
 				<a href="#" class="nav-toggle">
 					<div class="nav-toggle__bar"></div>
 				</a>
-				<?php wp_nav_menu( array('menu'=>'1', 'container'=>'') ); ?>
+				<?php wp_nav_menu( array( 'menu' => 'Main Menu', 'container'=>'' ) ); ?>
 			</nav>
 		</div>
 	</header>
