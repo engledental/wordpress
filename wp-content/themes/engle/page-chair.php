@@ -2,10 +2,82 @@
 
 <?php get_header(); ?>
 
-<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+<section class="chair-hero">
 
-	<h1><?php the_title(); ?></h1>
+	<?php if( have_rows('hero_titles') ): ?>
+		<div id="hero-slider" class="chair-hero__slider hero-slider">
+	    <?php while ( have_rows('hero_titles') ) : the_row(); ?>
+				<div class="slide">
+		      <div class="container">
+						<h1 class="chair-hero__title title__h1"><?php the_sub_field('title'); ?></h1>
+					</div>
+		    </div>
+	    <?php endwhile; ?>
+		</div>
+	<?php endif; ?>
 
-<?php endwhile; endif; ?>
+</section>
+
+<section class="chair-intro bg--purple">
+  <div class="container">
+    <div class="chair-intro__header">
+      <h2 class="title__h1"><?php the_field('intro_title'); ?></h2>
+			<?php the_field('intro_content'); ?>
+    </div>
+
+    <div class="chair-intro__highlights">
+      <div class="chair-intro__image">
+        <img src="<?php echo get_template_directory_uri(); ?>/dist/images/chair-demo.svg" alt="" />
+      </div>
+      <div class="chair-intro__list">
+				<?php if( have_rows('intro_list') ): ?>
+					<ul>
+				    <?php while ( have_rows('intro_list') ) : the_row(); ?>
+							<li><?php the_sub_field('list_item'); ?></li>
+				    <?php endwhile; ?>
+					</ul>
+				<?php endif; ?>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="chair-features bg--purple">
+  <div class="container">
+    <div class="chair-features__header">
+      <h2 class="chair-features__title title__h1"><?php the_field('features_title'); ?></h2>
+      <h3 class="chair-features__subtitle"><?php the_field('features_subtitle'); ?></h3>
+    </div>
+
+    <div class="chair-features__visuals">
+      <div class="chair-features__image">
+        <img src="<?php echo get_template_directory_uri(); ?>/dist/images/chair-cutout.png" srcset="<?php echo get_template_directory_uri(); ?>/dist/images/chair-cutout-2x.png 810w" alt="" />
+      </div>
+      <div class="chair-features__icon">
+        <img src="<?php echo get_template_directory_uri(); ?>/dist/images/icon-logo-e.svg" alt="" />
+      </div>
+    </div>
+
+		<?php if( have_rows('features') ): ?>
+			<div class="chair-features__list">
+				<?php while ( have_rows('features') ) : the_row(); ?>
+					<div class="chair-features__list-item">
+		        <h4 class="title__h3"><?php the_sub_field('title'); ?></h4>
+		        <p><?php the_sub_field('content'); ?></p>
+		      </div>
+				<?php endwhile; ?>
+			</div>
+		<?php endif; ?>
+
+  </div>
+</section>
+
+<section class="cta-section bg--purple">
+  <div class="container">
+    <h3 class="title--light"><?php the_field('cta_section_title'); ?></h3>
+    <p class="paragraph--large"><?php the_field('cta_section_subtitle'); ?></p>
+    <p><a href="<?php the_field('cta_section_button_link'); ?>" class="btn btn--outline"><?php the_field('cta_section_button_label'); ?></a></p>
+  </div>
+</section>
 
 <?php get_footer(); ?>

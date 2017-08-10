@@ -14,7 +14,7 @@
 		<div class="home-hero__content">
 			<h1 class="home-hero__title title__h1"><?php the_field('hero_title'); ?></h1>
 			<p class="home-hero__subtitle paragraph--large"><?php the_field('hero_content'); ?></p>
-			<p><a href="http://www.engledental.com/the-traverse-chair/" class="btn btn--turq">Learn More</a></p>
+			<p><a href="<?php the_field('hero_button_link'); ?>" class="btn btn--turq"><?php the_field('hero_button_label'); ?></a></p>
 		</div>
 	</div>
 
