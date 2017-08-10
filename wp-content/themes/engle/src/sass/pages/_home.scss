@@ -1,0 +1,295 @@
+
+.home-hero {
+	overflow: hidden;
+	position: relative;
+	background-color: $purple;
+	color: #fff;
+}
+
+.home-hero .container {
+	padding-top: $base*2;
+	padding-bottom: $base*4;
+
+	@include bp-min-width($medium) {
+		height: 720px;
+	}
+}
+
+.home-hero__slider {
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	height: 100%;
+
+	@include bp-min-width($large) {
+		max-width: 1500px;
+		margin: 0 auto;
+	}
+}
+
+.home-hero__slider .slide {
+	width: 100%;
+	background-color: $purple;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+
+	@include bp-min-width($medium) {
+		height: 720px;
+	}
+
+	@include bp-min-width($large) {
+		background-position: center left 400px;
+		background-size: auto 100%;
+	}
+}
+
+.home-hero__slider .slide-01 {
+	background-image: $home-hero-01;
+}
+
+.home-hero__slider .slide-02 {
+	background-image: $home-hero-02;
+}
+
+.home-hero__slider .slide-03 {
+	background-image: $home-hero-03;
+}
+
+.home-hero__slider .slide:before {
+	content: '';
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba($purple, .5);
+
+	@include bp-min-width($large) {
+		width: calc(100% - 400px);
+		left: 400px;
+		right: 200px;
+		background: linear-gradient(to right, $purple, transparent);
+	}
+}
+
+.home-hero__slider .slide:after {
+	@include bp-min-width(1500px) {
+		content: '';
+		position: absolute;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		width: 200px;
+		height: 100%;
+		background: linear-gradient(to left, $purple, transparent);
+	}
+}
+
+.home-hero__content {
+	position: relative;
+	max-width: 700px;
+
+	@include bp-min-width($medium) {
+		@include vertical-center;
+	}
+
+	@include bp-min-width($large) {
+		padding-left: 68px;
+	}
+}
+
+.home-hero__title {
+	@include bp-min-width($medium) {
+		padding-right: 90px;
+	}
+}
+
+.home-hero__subtitle {
+	margin-bottom: $base;
+
+	@include bp-min-width($medium) {
+		margin-bottom: 30px;
+	}
+}
+
+.home-perform .container {
+	@include bp-min-width($medium) {
+		padding-top: $base*3;
+		padding-bottom: $base*3;
+	}
+}
+
+.home-perform .section-title {
+	@include bp-min-width($medium) {
+		margin-bottom: $base*3;
+	}
+}
+
+.home-perform__grid {
+	text-align: center;
+}
+
+.home-perform__grid .col-1-3:not(:last-child) {
+	@include bp-max-width($medium) {
+		margin-bottom: $base*2;
+	}
+}
+
+.home-perform__grid h3 {
+	margin-bottom: 6px;
+}
+
+.home-perform__grid p {
+	@include font-size(15px);
+	line-height: 1.333;
+
+	@include bp-min-width($small) {
+		max-width: 300px;
+		margin: 0 auto;
+	}
+}
+
+.home-perform__icon {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 80px;
+	margin-bottom: 18px;
+}
+
+.home-perform__grid--usa img {
+	height: 64px;
+}
+
+.home-perform__grid--customized img {
+	height: 76px;
+}
+
+.home-perform__grid--service img {
+	height: 75px;
+}
+
+.home-products {
+	background: $purple;
+}
+
+.home-products .container {
+	@include bp-min-width($medium) {
+		max-width: 1170px;
+		padding-top: $base*3;
+		padding-bottom: $base*3;
+	}
+}
+
+.home-products .section-title {
+	color: #fff;
+}
+
+.home-products__grid .col-1-5 {
+	margin-bottom: $base;
+}
+
+.home-products__grid a {
+	position: relative;
+	display: block;
+	height: 220px;
+	padding: 20px;
+	background-color: #fff;
+	background-repeat: no-repeat;
+	background-position: right top;
+
+	@include bp-min-width($medium) {
+		height: 400px;
+		background-position: right bottom;
+	}
+}
+
+.home-products__grid a:hover {
+	box-shadow: inset 4px 4px $turq, inset -4px -4px $turq;
+}
+
+.home-products__grid--light-system a {
+	background-image: $home-product-light-systems;
+	background-size: 176px auto;
+}
+
+.home-products__grid--mobile-carts a {
+	background-image: $home-product-mobile-carts;
+	background-size: 180px auto;
+}
+
+.home-products__grid--utility-centers a {
+	background-image: $home-product-utility-centers;
+	background-size: 200px auto;
+}
+
+.home-products__grid--chair-mount-cupsidors a {
+	background-image: $home-product-chair-mount-cupsidors;
+	background-size: 110px auto;
+
+	@include bp-max-width($medium) {
+		background-position-y: 20px;
+	}
+}
+
+.home-products__grid--assistant-arms a {
+	background-image: $home-product-assistant-arms;
+	background-size: 200px auto;
+	background-position-y: 20px;
+
+	@include bp-min-width($medium) {
+		background-position: right 170px;
+	}
+}
+
+.home-products__footer {
+	text-align: center;
+
+	@include bp-min-width($medium) {
+		padding-top: $base*2;
+	}
+}
+
+.home-contact {
+	overflow: hidden;
+	background: $purple;
+	background-position: 110% center;
+	color: #fff;
+
+	@include bp-max-width($medium) {
+		text-align: center;
+	}
+}
+
+.home-contact .container {
+	position: relative;
+	padding-bottom: $base*4;
+
+	@include bp-min-width($medium) {
+		padding-top: $base*8;
+		padding-bottom: $base*10;
+	}
+
+	@include bp-min-width($xlarge) {
+		padding-left: 98px;
+	}
+}
+
+.home-contact__subtitle {
+	max-width: 400px;
+	margin-bottom: $base;
+}
+
+.home-contact__icon {
+	@include vertical-center;
+	right: -100px;
+
+	@include bp-max-width($medium) {
+		display: none;
+	}
+}

@@ -1,0 +1,128 @@
+/**
+Class Naming Structure: block__element--modifier
+**/
+
+$sans: 'Roboto', Helvetica, arial, sans-serif;
+
+$base: 24px;
+
+$weight-light:  300;
+$weight-book:   400;
+$weight-medium: 600;
+$weight-bold:   700;
+$weight-black:  900;
+
+body {
+  font: $weight-book 1em/1.5em $sans;
+  color: $purple;
+}
+
+h1,h2,h3,h4,h5 {
+  line-height: 1;
+}
+
+strong, b {
+  font-weight: $weight-bold;
+}
+
+em {
+  font-style: italic;
+}
+
+.title__h1 {
+	@include font-size(36px);
+	margin-bottom: 18px;
+	font-style: italic;
+	font-weight: $weight-bold;
+	text-transform: uppercase;
+
+	@include bp-min-width($medium) {
+		@include font-size(56px);
+	}
+}
+
+.title__h2 {
+  @include font-size(20px);
+	font-weight: $weight-bold;
+	text-transform: uppercase;
+
+	@include bp-min-width($medium) {
+		@include font-size(24px);
+	}
+}
+
+.title__h3 {
+  @include font-size(20px);
+  font-weight: $weight-bold;
+  text-transform: uppercase;
+}
+
+.title__h4 {
+  @include font-size(15px);
+  font-weight: $weight-bold;
+  text-transform: uppercase;
+}
+
+.title__h5 {
+  @include bp-min-width($medium) {
+  }
+}
+
+.section-title {
+  @include font-size(20px);
+  position: relative;
+  margin-bottom: $base*2;
+  padding-bottom: 12px;
+  font-weight: $weight-bold;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.section-title:after {
+  @include horizontal-center;
+  content: '';
+  bottom: 0;
+  display: block;
+  width: 200px;
+  height: 4px;
+  background: $turq;
+}
+
+.title--light {
+	@include font-size(48px);
+	margin-bottom: 12px;
+	font-weight: $weight-light;
+
+	@include bp-min-width($medium) {
+		@include font-size(72px);
+	}
+}
+
+.paragraph--large {
+  @include bp-min-width($medium) {
+    @include font-size(20px);
+    line-height: 1.2;
+  }
+}
+
+.body-content h1,
+.body-content h2,
+.body-content h3,
+.body-content h4 {
+}
+
+.body-content p,
+.body-content ul,
+.body-content ol {
+  @include font-units(15px, 22px);
+}
+
+.body-content p:not(:last-child),
+.body-content ul:not(:last-child),
+.body-content ol:not(:last-child),
+.body-content blockquote:not(:last-child) {
+  margin-bottom: $base;
+}
+
+.body-content blockquote {
+}
