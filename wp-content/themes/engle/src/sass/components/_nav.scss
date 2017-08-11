@@ -75,7 +75,8 @@
   }
 }
 
-.main-nav a:hover {
+.main-nav a:hover,
+.main-nav .current-menu-item a {
   @include bp-min-width($medium) {
     border-color: $turq;
   }
