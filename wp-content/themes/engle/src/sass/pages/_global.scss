@@ -1,0 +1,26 @@
+
+.global-page .container {
+  @include bp-min-width($medium) {
+    padding-top: $base*4;
+    padding-bottom: $base*4;
+  }
+}
+
+.global-page .body-content {
+	@include bp-min-width($large) {
+		padding-right: 40px;
+	}
+}
+
+.global-page .contact-info h3 {
+	color: $purple;
+}
+
+.global-page .contact-links a {
+	color: $purple;
+	border-color: $purple;
+
+	&:hover {
+		border-color: white;
+	}
+}

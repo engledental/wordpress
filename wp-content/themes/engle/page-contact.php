@@ -22,7 +22,7 @@
 
 				<div class="contact-info col-1-3">
 					<div class="contact-info-wrapper">
-						<h3><?php the_field('sidebar_block_title'); ?></h3>
+						<h3><?php the_field('contact_block_title', 'options'); ?></h3>
 						<h4>Call Us</h4>
 						<p><?php the_field('phone_number', 'options'); ?></p>
 

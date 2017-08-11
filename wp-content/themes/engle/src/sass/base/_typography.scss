@@ -63,9 +63,8 @@ em {
   text-transform: uppercase;
 }
 
-.title__h5 {
-  @include bp-min-width($medium) {
-  }
+.page-title {
+  margin-bottom: $base;
 }
 
 .section-title {
@@ -106,15 +105,30 @@ em {
 }
 
 .body-content h1,
-.body-content h2,
-.body-content h3,
-.body-content h4 {
+.body-content h2 {
+  @include font-size(20px);
+	font-weight: $weight-bold;
+	text-transform: uppercase;
+
+	@include bp-min-width($medium) {
+    @include font-units(24px, 30px);
+	}
 }
 
 .body-content p,
 .body-content ul,
 .body-content ol {
   @include font-units(15px, 22px);
+}
+
+.body-content ul {
+  margin-left: 1.5em;
+  list-style: disc;
+}
+
+.body-content ol {
+  margin-left: 1.5em;
+  list-style: decimal;
 }
 
 .body-content p:not(:last-child),
