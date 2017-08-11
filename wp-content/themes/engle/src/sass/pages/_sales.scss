@@ -29,6 +29,8 @@
 
 .sales-table {
 	@include bp-min-width($medium) {
+		display: table;
+		width: 100%;
 		padding-left: 15px;
 	}
 }
@@ -38,11 +40,8 @@
 }
 
 .sales-table__row {
-	border-bottom: 2px solid $turq;
-
 	@include bp-min-width($medium) {
-		display: table;
-		width: 100%;
+		display: table-row;
 	}
 }
 
@@ -53,6 +52,7 @@
 		@include font-size(20px);
 		display: table-cell;
 		padding: 12px 10px;
+		border-bottom: 2px solid $turq;
 	  text-transform: uppercase;
 	}
 }

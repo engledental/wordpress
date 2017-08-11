@@ -43,11 +43,6 @@
 	</div>
 </div>
 
-<!-- <section class="treatments-image">
-	<?php $image = get_field('hero_image'); ?>
-	<img src="<?php echo $image["sizes"]['full-width-image']; ?>" srcset="<?php echo $image["sizes"]['full-width-image']; ?> 1000w, <?php echo $image["sizes"]['full-width-image-2x']; ?> 2000w" alt="Oceana Vein Clinic Office" />
-</section> -->
-
 <section class="home-products">
   <div class="container">
 
