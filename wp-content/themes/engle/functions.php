@@ -63,6 +63,63 @@ function engle_load_scripts() {
 	wp_enqueue_style('main-css');
 }
 
+// Custom Post Types
+function custom_register_post_types() {
+
+	// Products
+	register_post_type('products', array(
+		'labels' => array(
+			'name' => __( 'Products' ),
+			'singular_name' => __( 'Product' )
+		),
+		'public'                => true,
+		'publicly_queryable'    => true,
+		'show_ui'               => true,
+		'show_in_menu'          => true,
+		'show_in_nav_menus'     => true,
+		'query_var'             => true,
+		'menu_icon' 						=> 'dashicons-lightbulb',
+		'capability_type'       => 'post',
+		'has_archive'						=> true,
+		'menu_position'         => null,
+		'exclude_from_search'   => false,
+		'rewrite' 							=> array( 'with_front' => false, 'slug' => 'products' ),
+		'supports' 							=> array( 'title', 'editor', 'thumbnail' ),
+		'taxonomies' 						=> array( 'technologies_category' )
+	));
+
+}
+add_action('init', 'custom_register_post_types');
+
+
+// Custom Taxonomies
+function custom_register_taxonomies() {
+
+	// Products Categories
+	register_taxonomy(
+		'products_category',
+		array( 'products' ),
+		array(
+			'labels'	=> array(
+				'name' => 'Categories',
+				'singular_name' => 'Category',
+			),
+			'show_ui' => true,
+			'show_admin_column' => true,
+			'query_var' => true,
+			'hierarchical' => true,
+			'rewrite' => array( 'slug' => 'products-category' )
+		)
+	);
+
+}
+add_action('init', 'custom_register_taxonomies');
+
+
+
+
+
+// Page Meta Title
 add_filter( 'wp_title', 'engle_filter_wp_title' );
 function engle_filter_wp_title( $title ) {
 	return $title . esc_attr( get_bloginfo( 'name' ) );
