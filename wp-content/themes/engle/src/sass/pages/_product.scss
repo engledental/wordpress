@@ -25,6 +25,10 @@
 	}
 }
 
+.product-image img {
+	max-height: 365px;
+}
+
 .product-content {
 	@include bp-min-width($medium) {
 		width: 58%;

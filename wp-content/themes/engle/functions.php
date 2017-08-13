@@ -116,9 +116,6 @@ function custom_register_taxonomies() {
 add_action('init', 'custom_register_taxonomies');
 
 
-
-
-
 // Page Meta Title
 add_filter( 'wp_title', 'engle_filter_wp_title' );
 function engle_filter_wp_title( $title ) {
@@ -156,7 +153,11 @@ function post_navigation() {
 
 
 // Image Sizes
-add_image_size( 'post-grid-thumb', 410, 300, true );
+add_image_size( 'product-thumb', 256, 288 );
+add_image_size( 'product-thumb-2x', 512, 576 );
+
+add_image_size( 'product-image', 380, 346 );
+add_image_size( 'product-image-2x', 760, 692 );
 
 
 // Default blog image

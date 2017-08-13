@@ -10,9 +10,10 @@
         <div class="product-image">
           <div class="product-image-wrapper">
 						<?php
-						$attachmentID = get_post_thumbnail_id();
-						$src = wp_get_attachment_image_src($attachmentID, 'full-post-image');
-						$srcset = wp_get_attachment_image_srcset($attachmentID, 'full-post-image'); ?>
+							$attachmentID = get_post_thumbnail_id();
+							$src = wp_get_attachment_image_src($attachmentID, 'product-image');
+							$srcset = wp_get_attachment_image_srcset($attachmentID, 'product-image');
+						?>
 						<img src="<?=$src[0]?>" srcset="<?=$srcset?>" alt="<?php the_title(); ?>" />
             <div class="product-ctas">
               <ul>
