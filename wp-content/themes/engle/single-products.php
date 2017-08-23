@@ -17,13 +17,13 @@
 						<img src="<?=$src[0]?>" srcset="<?=$srcset?>" alt="<?php the_title(); ?>" />
             <div class="product-ctas">
               <ul>
-                <li><a href="">Find a Representative</a></li>
-                <li><a href="">Request More Info</a></li>
+                <li><a href="<?php echo site_url('/sales-directory/'); ?>">Find a Representative</a></li>
+                <li><a href="<?php echo site_url('/contact-us/'); ?>">Request More Info</a></li>
               </ul>
             </div>
           </div>
           <div class="product-support-link">
-            <p><a href="">Technical Support</a></p>
+            <p><a href="<?php echo site_url('/support/'); ?>">Technical Support</a></p>
           </div>
         </div>
 
@@ -32,13 +32,19 @@
 
           <div class="body-content">
 						<?php the_content(); ?>
-            <p class="product-download"><a href="">Download Service Doc</a></p>
+						<?php $doc = get_field('service_doc'); ?>
+						<?php if($doc): ?>
+	            <p class="product-download"><a href="<?php echo $doc; ?>" target="_blank">Download Service Doc</a></p>
+						<?php endif; ?>
           </div>
 
-          <div class="product-options">
-            <h4 class="product-options__title">Available Options:</h4>
-            <p>2nd H.V.E. w/ 6′ Tubing, Assistant’s 3-Way Air/Water Syringe, 32″ Light Post w/ Pelton Style Adapter, 32″ Light Post w/ Ritter Style Adapter, Engle Chair Mounting Bracket Assembly For 2″ Outside Diameter Post, Light Post Mounted Telescopic Assistant’s Arm, Small J-Box w/ Air &amp; Water Master Valve/Filter/Regulator Assembly Additional Umbilical</p>
-          </div>
+					<?php $options = get_field('available_options'); ?>
+					<?php if($options): ?>
+	          <div class="product-options">
+	            <h4 class="product-options__title">Available Options:</h4>
+	            <p><?php echo $options; ?></p>
+	          </div>
+					<?php endif; ?>
         </div>
 
       </div>

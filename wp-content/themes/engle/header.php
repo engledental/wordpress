@@ -12,7 +12,7 @@
 	<header class="site-header">
 		<div class="container">
 			<div class="site-logo">
-				<a href="/"><img src="<?php echo get_template_directory_uri(); ?>/dist/images/logo.svg" alt="Engle Dental" /></a>
+				<a href="<?php echo site_url(); ?>"><img src="<?php echo get_template_directory_uri(); ?>/dist/images/logo.svg" alt="Engle Dental" /></a>
 			</div>
 			<nav class="main-nav">
 				<a href="#" class="nav-toggle">
