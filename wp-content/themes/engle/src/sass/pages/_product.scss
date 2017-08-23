@@ -5,7 +5,7 @@
 
 	@include bp-min-width($medium) {
 		padding-top: $base*4;
-		padding-bottom: $base*6;
+		padding-bottom: $base*4;
 	}
 }
 
@@ -121,9 +121,13 @@
 
 .related-products__title {
 	margin-bottom: $base;
+
+	@include bp-min-width($medium) {
+		margin-bottom: $base*1.5;
+	}
 }
 
-.related-products .product-grid__item:last-child {
+.related-products .product-grid__item:last-child:not(:first-child) {
 	@include bp-min-width($medium) {
 		display: none;
 	}
