@@ -198,3 +198,10 @@ function get_default_blog_image($size=null){
 if( function_exists('acf_add_options_page') ) {
 	acf_add_options_page();
 }
+
+
+// Remove ninja form stylesheets
+function wpgood_nf_display_enqueue_scripts(){
+  wp_dequeue_style( 'nf-display' );
+}
+add_action( 'nf_display_enqueue_scripts', 'wpgood_nf_display_enqueue_scripts');
