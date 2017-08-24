@@ -46,7 +46,7 @@
 <section class="home-products">
   <div class="container">
 
-    <h2 class="section-title">Engle Dental Products</h2>
+    <h2 class="section-title"><?php the_field('products_section_title'); ?></h2>
 
     <div class="home-products__grid flex-grid">
       <div class="home-products__grid--light-system col-1-5">
@@ -77,7 +77,7 @@
     </div>
 
     <div class="home-products__footer">
-      <p><a href="" class="btn btn--outline">Explore More</a></p>
+      <p><a href="<?php the_field('products_section_button_link'); ?>" class="btn btn--outline"><?php the_field('products_section_button_label'); ?></a></p>
     </div>
 
   </div>

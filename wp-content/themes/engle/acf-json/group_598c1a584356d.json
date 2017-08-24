@@ -181,6 +181,63 @@
             ]
         },
         {
+            "key": "field_599f20e5c65d6",
+            "label": "Products Section Title",
+            "name": "products_section_title",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_599f20f8c65d7",
+            "label": "Products Section Button Label",
+            "name": "products_section_button_label",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_599f2104c65d8",
+            "label": "Products Section Button Link",
+            "name": "products_section_button_link",
+            "type": "page_link",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "post_type": [],
+            "taxonomy": [],
+            "allow_null": 0,
+            "allow_archives": 1,
+            "multiple": 0
+        },
+        {
             "key": "field_598ca43fc4412",
             "label": "CTA Section Title",
             "name": "cta_section_title",
@@ -276,5 +333,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1502389367
+    "modified": 1503600936
 }
