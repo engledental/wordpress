@@ -159,6 +159,15 @@ add_image_size( 'product-thumb-2x', 512, 576 );
 add_image_size( 'product-image', 380, 346 );
 add_image_size( 'product-image-2x', 760, 692 );
 
+add_image_size( 'catalog-cover', 573, 740 );
+add_image_size( 'catalog-cover-2x', 1146, 1480 );
+
+add_image_size( 'upholstery-thumb', 573, 377, true );
+add_image_size( 'upholstery-thumb-2x', 1146, 754, true );
+
+add_image_size( 'color-thumb', 98, 98, true );
+add_image_size( 'color-thumb-2x', 188, 188, true );
+
 
 // Default blog image
 function get_default_blog_image($size=null){
