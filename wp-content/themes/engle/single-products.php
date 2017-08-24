@@ -54,43 +54,42 @@
 
 <?php endwhile; endif; ?>
 
-<section class="related-products">
-  <div class="container container--narrow">
-    <h3 class="related-products__title title__h3">Related Products</h3>
 
-    <?php if( have_rows('related_products') ): ?>
-      <div class="product-grid">
-        <?php
-          while ( have_rows('related_products') ) : the_row();
+<?php if( have_rows('related_products') ): ?>
+  <section class="related-products">
+    <div class="container container--narrow">
+      <h3 class="related-products__title title__h3">Related Products</h3>
 
-            $post_object = get_sub_field('product');
-            if($post_object):
-              $post = $post_object;
-              setup_postdata($post);
-        ?>
-          <div class="product-grid__item col-1-3">
-            <a href="<?php the_permalink(); ?>" class="product-grid__link">
-              <div class="product-grid__image">
-                <?php
-  								$attachmentID = get_post_thumbnail_id();
-  								$src = wp_get_attachment_image_src($attachmentID, 'product-thumb');
-  								$srcset = wp_get_attachment_image_srcset($attachmentID, 'product-thumb');
-  							?>
-  							<img src="<?=$src[0]?>" srcset="<?=$srcset?>" alt="<?php the_title(); ?>" />
-              </div>
-              <h3 class="product-grid__title"><?php the_title(); ?></h3>
-            </a>
-          </div>
-          <?php wp_reset_postdata(); ?>
-        <?php endif; ?>
+        <div class="product-grid">
+          <?php
+            while ( have_rows('related_products') ) : the_row();
 
-        <?php endwhile; ?>
-      </div>
-    <?php endif; ?>
+              $post_object = get_sub_field('product');
+              if($post_object):
+                $post = $post_object;
+                setup_postdata($post);
+          ?>
+            <div class="product-grid__item col-1-3">
+              <a href="<?php the_permalink(); ?>" class="product-grid__link">
+                <div class="product-grid__image">
+                  <?php
+    								$attachmentID = get_post_thumbnail_id();
+    								$src = wp_get_attachment_image_src($attachmentID, 'product-thumb');
+    								$srcset = wp_get_attachment_image_srcset($attachmentID, 'product-thumb');
+    							?>
+    							<img src="<?=$src[0]?>" srcset="<?=$srcset?>" alt="<?php the_title(); ?>" />
+                </div>
+                <h3 class="product-grid__title"><?php the_title(); ?></h3>
+              </a>
+            </div>
+            <?php wp_reset_postdata(); ?>
+          <?php endif; ?>
 
+          <?php endwhile; ?>
+        </div>
 
-
-  </div>
-</section>
+    </div>
+  </section>
+<?php endif; ?>
 
 <?php get_footer(); ?>
