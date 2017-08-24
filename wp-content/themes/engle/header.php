@@ -4,6 +4,7 @@
 	<meta charset="utf-8" />
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 	<meta content="width=device-width, initial-scale=1.0, user-scalable=1, minimum-scale=1.0" name="viewport">
+	<?php get_template_part( 'partials/favicons' ); ?>
 	<?php wp_head(); ?>
 </head>
 <body <?php body_class(); ?>>
