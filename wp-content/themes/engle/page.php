@@ -13,28 +13,30 @@
 				</div>
 			</div>
 
-			<div class="contact-info col-1-3">
-				<div class="contact-info-wrapper">
-					<h3><?php the_field('contact_block_title', 'options'); ?></h3>
-					<h4>Call Us</h4>
-					<p><?php the_field('phone_number', 'options'); ?></p>
+			<aside class="sidebar-right col-1-3">
+				<div class="contact-info">
+					<div class="contact-info-wrapper">
+						<h3><?php the_field('contact_block_title', 'options'); ?></h3>
+						<h4>Call Us</h4>
+						<p><?php the_field('phone_number', 'options'); ?></p>
 
-					<h4>Email</h4>
-					<p><a href="mailto:<?php the_field('email_address', 'options'); ?>"><?php the_field('email_address', 'options'); ?></a></p>
+						<h4>Email</h4>
+						<p><a href="mailto:<?php the_field('email_address', 'options'); ?>"><?php the_field('email_address', 'options'); ?></a></p>
 
-					<h4>Fax</h4>
-					<p><?php the_field('fax_number', 'options'); ?></p>
+						<h4>Fax</h4>
+						<p><?php the_field('fax_number', 'options'); ?></p>
 
-					<h4>Mailing Address</h4>
-					<p><?php the_field('address', 'options'); ?>, <?php the_field('city', 'options'); ?>, <?php the_field('state', 'options'); ?> <?php the_field('zip', 'options'); ?></p>
+						<h4>Mailing Address</h4>
+						<p><?php the_field('address', 'options'); ?>, <?php the_field('city', 'options'); ?>, <?php the_field('state', 'options'); ?> <?php the_field('zip', 'options'); ?></p>
+					</div>
+					<div class="contact-links">
+						<ul>
+							<li><a href="/support/">Technical Support</a></li>
+							<li><a href="mailto:<?php the_field('email_address', 'options'); ?>">Send Us Feedback</a></li>
+						</ul>
+					</div>
 				</div>
-				<div class="contact-links">
-					<ul>
-						<li><a href="/support/">Technical Support</a></li>
-						<li><a href="mailto:<?php the_field('email_address', 'options'); ?>">Send Us Feedback</a></li>
-					</ul>
-				</div>
-			</div>
+			</aside>
 
 		</div>
 
