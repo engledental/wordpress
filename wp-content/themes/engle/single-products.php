@@ -54,7 +54,6 @@
 
 <?php endwhile; endif; ?>
 
-
 <?php if( have_rows('related_products') ): ?>
   <section class="related-products">
     <div class="container container--narrow">

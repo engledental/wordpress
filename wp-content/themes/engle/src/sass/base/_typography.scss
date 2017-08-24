@@ -115,6 +115,16 @@ em {
 	}
 }
 
+.body-content h3,
+.body-content h4 {
+	font-weight: $weight-bold;
+	text-transform: uppercase;
+
+	@include bp-min-width($medium) {
+    @include font-units(18px, 24px);
+	}
+}
+
 .body-content p,
 .body-content ul,
 .body-content ol {
