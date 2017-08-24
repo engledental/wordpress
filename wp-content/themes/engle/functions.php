@@ -131,23 +131,33 @@ function cc_mime_types( $mimes ){
 add_filter( 'upload_mimes', 'cc_mime_types' );
 
 
-// Post Navigation
-function post_navigation() {
-	$prev_page = get_previous_posts_link('<svg class="post-grid--icon icon-arrow-left"><use xlink:href="#icon-arrow-left"></use></svg> Previous Posts');
-	$next_page = get_next_posts_link('More Posts <svg class="post-grid--icon icon-arrow-right"><use xlink:href="#icon-arrow-right"></use></svg>');
-	if($prev_page || $next_page) {
-		echo '<div class="post-grid-nav">';
-		if ($prev_page) {
-			echo  '<div class="post-grid-nav--item">' . $prev_page . '</div>';
-		} else {
-			echo '<div class="post-grid-nav--item"><svg class="post-grid-nav--icon icon-arrow-left"><use xlink:href="#icon-arrow-left"></use></svg> Previous Posts</div>';
+// Numeric Pagination
+function pagination($pages = '', $range = 4) {
+	$showitems = ($range * 2)+1;
+
+	global $paged;
+	if(empty($paged)) $paged = 1;
+
+	if($pages == '') {
+		global $wp_query;
+		$pages = $wp_query->max_num_pages;
+		if(!$pages) {
+			$pages = 1;
 		}
-		if ($next_page) {
-			echo  '<div class="post-grid-nav--item">' . $next_page . '</div>';
-		} else {
-			echo '<div class="post-grid-nav--item">More Posts <svg class="post-grid-nav--icon icon-arrow-right"><use xlink:href="#icon-arrow-right"></use></svg></div>';
+	}
+
+	if(1 != $pages) {
+		echo "<div class=\"pager\"><ul>";
+		if($paged > 1 && $showitems < $pages) echo "<li><a href='".get_pagenum_link($paged - 1)."' class=\"pager__direction\">&lsaquo;</a></li>";
+
+		for ($i=1; $i <= $pages; $i++) {
+		 if (1 != $pages &&( !($i >= $paged+$range+1 || $i <= $paged-$range-1) || $pages <= $showitems )) {
+		   echo ($paged == $i)? "<li class=\"is-current\"><span>".$i."</span></li>":"<li><a href='".get_pagenum_link($i)."'>".$i."</a></li>";
+		 }
 		}
-		echo '</div>';
+
+		if ($paged < $pages && $showitems < $pages) echo "<li><a href=\"".get_pagenum_link($paged + 1)."\" class=\"pager__direction\">&rsaquo;</a></li>";
+		echo "</ul></div>\n";
 	}
 }
 

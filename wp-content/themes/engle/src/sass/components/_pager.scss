@@ -14,14 +14,15 @@
 	margin-left: 12px;
 }
 
-.pager a {
+.pager a,
+.pager span {
 	display: block;
 	padding: 0 5px;
 	font-weight: $weight-bold;
 }
 
 .pager a:hover,
-.pager .is-current a {
+.pager .is-current span {
 	background: $purple;
 	color: white;
 }
