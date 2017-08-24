@@ -40,6 +40,10 @@
 }
 
 .sales-table__row {
+	@include bp-max-width($medium) {
+		margin-bottom: $base;
+	}
+
 	@include bp-min-width($medium) {
 		display: table-row;
 	}
@@ -54,6 +58,18 @@
 		padding: 12px 10px;
 		border-bottom: 2px solid $turq;
 	  text-transform: uppercase;
+	}
+}
+
+.sales-table__col:first-child {
+	@include bp-min-width($medium) {
+		width: 25%;
+	}
+}
+
+.sales-table__col:nth-child(2) {
+	@include bp-min-width($medium) {
+		width: 20%;
 	}
 }
 
