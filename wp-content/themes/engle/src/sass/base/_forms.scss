@@ -8,25 +8,8 @@ nf-field {
   width: 100%;
 }
 
-nf-field:first-child,
-nf-field:nth-child(2) {
-  width: 50%;
-}
-
-nf-field:first-child {
-  padding-right: 8px;
-}
-
-nf-field:nth-child(2) {
-  padding-left: 8px;
-}
-
 .nf-field-container {
   margin-bottom: 18px;
-}
-
-label {
-  @include is-hidden;
 }
 
 input:not([type="submit"]):not([type="button"]) {
@@ -60,6 +43,11 @@ textarea {
     padding-right: 20px;
     padding-left: 20px;
   }
+}
+
+.global-page input:not([type="submit"]):not([type="button"]),
+.global-page textarea {
+  border: 1px solid $purple;
 }
 
 ::placeholder {
@@ -124,4 +112,27 @@ select::-ms-expand {
 .nf-error-msg {
   @include font-size(13px);
   color: red;
+}
+
+
+/**  Contact & Support Form ============**/
+
+.contact-form,
+.tech-support {
+  label {
+    @include is-hidden;
+  }
+
+  nf-field:first-child,
+  nf-field:nth-child(2) {
+    width: 50%;
+  }
+
+  nf-field:first-child {
+    padding-right: 8px;
+  }
+
+  nf-field:nth-child(2) {
+    padding-left: 8px;
+  }
 }

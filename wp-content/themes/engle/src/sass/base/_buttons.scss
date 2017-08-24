@@ -23,6 +23,17 @@ a {
   }
 }
 
+@mixin btn--purple {
+  background: $purple;
+  border: 2px solid $purple;
+  color: white;
+
+  &:hover {
+    background: white;
+    color: $purple;
+  }
+}
+
 @mixin btn--outline {
   background: transparent;
   border: 2px solid $turq;
@@ -68,5 +79,13 @@ button {
 input[type="submit"],
 input[type="button"] {
   @include btn;
-  @include btn--outline;
+  @include btn--purple;
+}
+
+.contact-form,
+.tech-support {
+  input[type="submit"],
+  input[type="button"] {
+    @include btn--outline;
+  }
 }
