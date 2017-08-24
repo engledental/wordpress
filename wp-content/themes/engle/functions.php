@@ -54,6 +54,12 @@ function engle_load_scripts() {
 	);
 	wp_enqueue_script('main-js');
 
+	// fonts css
+	wp_enqueue_style('google-fonts',
+		'https://fonts.googleapis.com/css?family=Roboto:100,400,400i,700,700i',
+		false
+	);
+
 	// main css
 	wp_register_style('main-css',
 		get_stylesheet_uri(),
