@@ -27,7 +27,7 @@
 						<p><?php the_field('phone_number', 'options'); ?></p>
 
 						<h4>Email</h4>
-						<p><a href="mailto:<?php the_field('email_address', 'options'); ?>"><?php the_field('email_address', 'options'); ?></a></p>
+						<p><a href="mailto:<?php the_field('email', 'options'); ?>"><?php the_field('email', 'options'); ?></a></p>
 
 						<h4>Fax</h4>
 						<p><?php the_field('fax_number', 'options'); ?></p>

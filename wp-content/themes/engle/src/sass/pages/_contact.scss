@@ -55,6 +55,14 @@
 	margin-bottom: 18px;
 }
 
+.contact-info a {
+	color: white;
+
+	&:hover {
+		color: $turq;
+	}
+}
+
 .contact-links {
 	padding-top: 12px;
 }
