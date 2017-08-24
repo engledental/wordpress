@@ -19,7 +19,6 @@
 
 .chair-hero__slider {
 	width: 100%;
-	background-image: $chair-hero;
 	background-color: $purple;
 	background-repeat: no-repeat;
 	background-position: center;
@@ -27,7 +26,6 @@
 
 	@include bp-min-width($large) {
 		height: 720px;
-		background-image: $chair-hero-2x;
 	}
 }
 

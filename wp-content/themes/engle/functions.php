@@ -178,6 +178,9 @@ add_image_size( 'upholstery-thumb-2x', 1146, 754, true );
 add_image_size( 'color-thumb', 98, 98, true );
 add_image_size( 'color-thumb-2x', 188, 188, true );
 
+add_image_size( 'hero-bg', 1000, 562, true );
+add_image_size( 'hero-bg-2x', 2000, 1124, true );
+
 
 // Default blog image
 function get_default_blog_image($size=null){

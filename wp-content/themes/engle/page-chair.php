@@ -5,6 +5,17 @@
 <section class="chair-hero">
 
 	<?php if( have_rows('hero_titles') ): ?>
+		<?php
+			$bg_image = get_field('hero_background_image');
+			$src = wp_get_attachment_image_src($bg_image, 'hero-bg');
+			$src_2x = wp_get_attachment_image_src($bg_image, 'hero-bg-2x');
+		?>
+		<style type="text/css" scoped>
+			.chair-hero__slider { background-image: url('<?=$src[0]?>'); }
+			@media (min-width: 50em) {
+				.chair-hero__slider { background-image: url('<?=$src_2x[0]?>'); }
+			}
+		</style>
 		<div id="hero-slider" class="chair-hero__slider hero-slider">
 	    <?php while ( have_rows('hero_titles') ) : the_row(); ?>
 				<div class="slide">
