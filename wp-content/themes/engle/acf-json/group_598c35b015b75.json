@@ -3,6 +3,25 @@
     "title": "Global",
     "fields": [
         {
+            "key": "field_59a67a2c3b08e",
+            "label": "Product Download Label",
+            "name": "product_download_label",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
             "key": "field_598de671268a9",
             "label": "Contact Block Title",
             "name": "contact_block_title",
@@ -241,5 +260,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1502471812
+    "modified": 1504082493
 }

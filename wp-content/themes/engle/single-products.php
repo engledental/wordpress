@@ -34,7 +34,7 @@
 						<?php the_content(); ?>
 						<?php $doc = get_field('service_doc'); ?>
 						<?php if($doc): ?>
-	            <p class="product-download"><a href="<?php echo $doc; ?>" target="_blank">Download Service Doc</a></p>
+	            <p class="product-download"><a href="<?php echo $doc; ?>" target="_blank"><?php the_field('product_download_label', 'options'); ?></a></p>
 						<?php endif; ?>
           </div>
 
