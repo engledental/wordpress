@@ -4,6 +4,19 @@ a {
   color: $purple;
 }
 
+.body-content a {
+	border-bottom: 1px solid $purple;
+
+  &:hover {
+    border-color: white;
+  }
+}
+
+.single-product .body-content a {
+  text-transform: uppercase;
+	font-weight: bold;
+}
+
 @mixin btn {
   @include font-size(15px);
   display: inline-block;
@@ -66,6 +79,8 @@ a {
     border-color: white;
   }
 }
+
+
 
 input[type="submit"],
 input[type="button"],
