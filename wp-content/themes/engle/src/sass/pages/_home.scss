@@ -162,15 +162,15 @@
 	margin-bottom: 18px;
 }
 
-.home-intro__grid--usa img {
+.home-intro__grid-item:first-child img {
 	height: 64px;
 }
 
-.home-intro__grid--customized img {
+.home-intro__grid-item:nth-child(2) img {
 	height: 76px;
 }
 
-.home-intro__grid--service img {
+.home-intro__grid-item:nth-child(3) img {
 	height: 75px;
 }
 

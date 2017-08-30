@@ -28,7 +28,7 @@
 		<?php if( have_rows('intro_content_columns') ): ?>
 			<div class="home-intro__grid flex-grid">
 		    <?php while ( have_rows('intro_content_columns') ) : the_row(); ?>
-					<div class="home-intro__grid--usa col-1-3">
+					<div class="home-intro__grid-item col-1-3">
 						<div class="home-intro__icon">
 							<?php $image = get_sub_field('icon'); ?>
 			      	<img src="<?php echo $image['url']; ?>" alt="" />
