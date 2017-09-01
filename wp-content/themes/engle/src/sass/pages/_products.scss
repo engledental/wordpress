@@ -8,6 +8,10 @@
 	}
 }
 
+.products-hero .title__h1:last-child {
+	margin-bottom: 0;
+}
+
 .products-nav .container {
 	@include bp-max-width($medium) {
 		padding-top: $base;

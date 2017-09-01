@@ -125,7 +125,11 @@
 }
 
 .video-embed {
-	margin-bottom: $base;
+	margin-bottom: 12px;
+
+	@include bp-min-width($medium) {
+		margin-bottom: $base;
+	}
 }
 
 .video-title {

@@ -3,7 +3,10 @@
 <section class="products-hero">
   <div class="container container--narrow">
     <h1 class="title__h1"><?php single_cat_title(); ?></h1>
-    <h2 class="title__h3"><?php echo category_description(); ?></p>
+    <?php $cat_desc = category_description(); ?>
+    <?php if($cat_desc): ?>
+      <h2 class="title__h3"><?php echo $cat_desc; ?></h2>
+    <?php endif; ?>
   </div>
 </section>
 
