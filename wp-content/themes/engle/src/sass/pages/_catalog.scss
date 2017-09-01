@@ -9,6 +9,7 @@
 }
 
 .catalogs .container {
+	padding-top: $base;
 	padding-bottom: 0;
 
 	@include bp-min-width($medium) {
@@ -16,8 +17,18 @@
 	}
 }
 
+.catalog-grid__item:not(:last-child) {
+	@include bp-max-width($medium) {
+		margin-bottom: $base*2;
+	}
+}
+
 .catalog-grid__item-title {
-	margin-bottom: $base;
+	margin-bottom: 12px;
+
+	@include bp-min-width($medium) {
+		margin-bottom: $base;
+	}
 }
 
 .catalog-grid__item-link {
@@ -62,12 +73,19 @@
 	}
 }
 
-.upholstery .container,
 .colors .container {
-	padding-bottom: 0;
+	padding-top: $base;
 
 	@include bp-min-width($medium) {
 		padding-bottom: $base*4;
+	}
+}
+
+.upholstery .container {
+	padding-bottom: 0;
+
+	@include bp-min-width($medium) {
+		padding-bottom: $base*3;
 	}
 }
 
@@ -83,13 +101,17 @@
 }
 
 .upholstery-grid__item {
-	margin-bottom: 12px;
+	margin-bottom: $base;
 }
 
 .color-grid__item {
-	width: 186px;
+	width: 50%;
 	padding: 0 10px;
 	margin-bottom: 20px;
+
+	@include bp-min-width($medium) {
+		width: 186px;
+	}
 }
 
 .upholstery-grid__item-title {
@@ -102,9 +124,6 @@
 }
 
 .color-grid__item-title {
+	@include font-units(12px, 12px);
 	padding-top: 6px;
-
-	@include bp-min-width($medium) {
-		@include font-units(12px, 12px);
-	}
 }
