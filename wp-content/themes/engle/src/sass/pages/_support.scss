@@ -179,6 +179,10 @@
 	}
 }
 
+.tech-support-grid__contact-info a {
+	color: white;
+}
+
 .tech-support-grid__contact-info p {
 	@include font-units(15px, 18px);
 	font-weight: $weight-bold;
