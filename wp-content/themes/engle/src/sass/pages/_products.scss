@@ -59,6 +59,7 @@
 }
 
 .product-grid__item {
+	display: flex;
 	margin-bottom: $base;
 
 	@include bp-max-width($medium) {
@@ -71,7 +72,7 @@
 }
 
 .product-grid__link {
-	height: 100%;
+	width: 100%;
 	padding: 10px;
 	box-shadow: inset 4px 4px white, inset -4px -4px white, 4px 4px 20px 4px rgba(0,0,0,0.08);
 
