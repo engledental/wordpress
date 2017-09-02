@@ -48,7 +48,7 @@
 		<?php endif; ?>
 
     <footer class="sales-footer">
-      <p class="title__h2"><?php the_field('footer_subtitle'); ?></p>
+      <p><?php the_field('footer_subtitle'); ?></p>
     </footer>
 
   </div>

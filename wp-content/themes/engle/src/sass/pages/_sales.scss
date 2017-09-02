@@ -21,10 +21,7 @@
 
 .sales-region__title {
 	margin-bottom: $base;
-}
-
-.sales-region__title span {
-	border-bottom: 1px solid white;
+	color: $turq;
 }
 
 .sales-table {
@@ -51,13 +48,13 @@
 
 .sales-table__col {
 	font-weight: $weight-bold;
+	text-transform: uppercase;
 
 	@include bp-min-width($medium) {
 		@include font-size(20px);
 		display: table-cell;
 		padding: 12px 10px;
 		border-bottom: 2px solid $turq;
-	  text-transform: uppercase;
 	}
 }
 
@@ -85,8 +82,19 @@
 	height: 20px;
 }
 
+a:hover .icon-email {
+	@include global-transition(.15s);
+	fill: $turq;
+}
+
 .sales-footer {
 	@include bp-min-width($medium) {
 		padding-top: $base;
 	}
+}
+
+.sales-footer p {
+	@include font-size(20px);
+	font-weight: $weight-bold;
+	text-transform: uppercase;
 }
