@@ -44,8 +44,12 @@
 	height: 100%;
 	max-height: 460px;
 	margin: 0 auto 12px;
-	padding: 30px 20px 84px;
+	padding: 30px 20px 114px;
 	box-shadow: 4px 4px 20px 4px rgba(0,0,0,0.08);
+
+	@include bp-min-width($small) {
+		padding-bottom: 84px;
+	}
 }
 
 .product-ctas {
@@ -54,8 +58,11 @@
 	bottom: 0;
 	left: 0;
 	right: 0;
-	padding: 12px 10px;
 	background: $turq;
+
+	@include bp-min-width($xsmall) {
+		padding: 12px 0;
+	}
 }
 
 .product-ctas ul {
@@ -63,14 +70,46 @@
 }
 
 .product-ctas li {
-	display: inline-block;
-	padding: 0 15px;
+	@include bp-min-width($xsmall) {
+		display: inline-block;
+		padding: 0 15px;
+	}
+}
+
+.product-ctas li:first-child {
+	position: relative;
+}
+
+.product-ctas li:first-child:after {
+	content: '';
+	display: block;
+	position: absolute;
+	background: $purple;
+
+	@include bp-max-width($xsmall) {
+		bottom: 0;
+		left: 0;
+		width: 100%;
+		height: 1px;
+	}
+
+	@include bp-min-width($xsmall) {
+		top: 0;
+		right: -2px;
+		width: 1px;
+		height: 24px;
+	}
 }
 
 .product-ctas a {
 	@include font-size(15px);
 	font-weight: $weight-bold;
 	text-transform: uppercase;
+
+	@include bp-max-width($xsmall) {
+		display: block;
+		padding: 12px 0;
+	}
 }
 
 .product-support-link {
