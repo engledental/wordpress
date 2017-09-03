@@ -109,8 +109,25 @@
 	@include font-units(18px, 21px);
 }
 
+.chair-intro__list li {
+	position: relative;
+	padding-left: 20px;
+}
+
 .chair-intro__list li:not(:last-child) {
 	margin-bottom: 18px;
+}
+
+.chair-intro__list li:before {
+	content: '';
+	display: block;
+	position: absolute;
+	top: 9px;
+	left: 0;
+	width: 6px;
+	height: 6px;
+	background: $turq;
+	border-radius: 50%;
 }
 
 .chair-features .container {

@@ -44,7 +44,7 @@
 				<?php if( have_rows('intro_list') ): ?>
 					<ul>
 				    <?php while ( have_rows('intro_list') ) : the_row(); ?>
-							<li><?php the_sub_field('list_item'); ?></li>
+							<li class="title__h3"><?php the_sub_field('list_item'); ?></li>
 				    <?php endwhile; ?>
 					</ul>
 				<?php endif; ?>
