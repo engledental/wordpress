@@ -62,7 +62,7 @@
 
     <div class="chair-features__visuals">
       <div class="chair-features__image">
-        <img src="<?php echo get_template_directory_uri(); ?>/dist/images/chair-cutout.png" srcset="<?php echo get_template_directory_uri(); ?>/dist/images/chair-cutout-2x.png 810w" alt="" />
+        <img src="<?php echo get_template_directory_uri(); ?>/dist/images/chair-cutout.png" alt="" />
       </div>
       <div class="chair-features__icon">
         <img src="<?php echo get_template_directory_uri(); ?>/dist/images/icon-logo-e.svg" alt="" />
