@@ -1,0 +1,10 @@
+
+.error404 .global-page {
+	@include bp-min-width($medium) {
+		min-height: $base*20;
+	}
+}
+
+.error404 .body-content {
+	margin-bottom: $base;
+}

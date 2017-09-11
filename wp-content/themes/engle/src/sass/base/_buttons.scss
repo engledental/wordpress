@@ -62,6 +62,10 @@ a {
   @include btn;
 }
 
+.btn--purple {
+  @include btn--purple;
+}
+
 .btn--turq {
   @include btn--turq;
 }
