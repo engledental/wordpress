@@ -200,6 +200,49 @@
             "maxlength": ""
         },
         {
+            "key": "field_59bd1c7881090",
+            "label": "Products Grid",
+            "name": "products_grid",
+            "type": "repeater",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "collapsed": "",
+            "min": 5,
+            "max": 5,
+            "layout": "block",
+            "button_label": "Add Product Category",
+            "sub_fields": [
+                {
+                    "key": "field_59bd1c9881092",
+                    "label": "Category",
+                    "name": "category",
+                    "type": "taxonomy",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "taxonomy": "products_category",
+                    "field_type": "select",
+                    "allow_null": 0,
+                    "add_term": 0,
+                    "save_terms": 0,
+                    "load_terms": 0,
+                    "return_format": "object",
+                    "multiple": 0
+                }
+            ]
+        },
+        {
             "key": "field_599f20f8c65d7",
             "label": "Products Section Button Label",
             "name": "products_section_button_label",
@@ -333,5 +376,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1503600936
+    "modified": 1505566486
 }

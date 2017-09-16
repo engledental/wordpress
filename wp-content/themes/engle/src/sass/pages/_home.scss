@@ -213,22 +213,22 @@
 	box-shadow: inset 4px 4px $turq, inset -4px -4px $turq;
 }
 
-.home-products__grid--light-system a {
+.home-products__grid-item:nth-child(1) a {
 	background-image: $home-product-light-systems;
 	background-size: 176px auto;
 }
 
-.home-products__grid--mobile-carts a {
+.home-products__grid-item:nth-child(2) a {
 	background-image: $home-product-mobile-carts;
 	background-size: 180px auto;
 }
 
-.home-products__grid--utility-centers a {
+.home-products__grid-item:nth-child(3) a {
 	background-image: $home-product-utility-centers;
 	background-size: 200px auto;
 }
 
-.home-products__grid--chair-mount-cupsidors a {
+.home-products__grid-item:nth-child(4) a {
 	background-image: $home-product-chair-mount-cupsidors;
 	background-size: 110px auto;
 
@@ -237,7 +237,7 @@
 	}
 }
 
-.home-products__grid--assistant-arms a {
+.home-products__grid-item:nth-child(5) a {
 	background-image: $home-product-assistant-arms;
 	background-size: 200px auto;
 	background-position-y: 20px;

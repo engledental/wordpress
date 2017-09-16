@@ -48,33 +48,18 @@
 
     <h2 class="section-title"><?php the_field('products_section_title'); ?></h2>
 
-    <div class="home-products__grid flex-grid">
-      <div class="home-products__grid--light-system col-1-5">
-        <a href="<?php echo site_url('/products-category/light-systems/'); ?>">
-          <h3 class="title__h3">Light Systems</h3>
-        </a>
-      </div>
-      <div class="home-products__grid--mobile-carts col-1-5">
-        <a href="<?php echo site_url('/products-category/mobile-carts/'); ?>">
-          <h3 class="title__h3">Mobile Carts</h3>
-        </a>
-      </div>
-      <div class="home-products__grid--utility-centers col-1-5">
-				<a href="<?php echo site_url('/products-category/utility-center-packages/'); ?>">
-          <h3 class="title__h3">Utility Centers</h3>
-        </a>
-      </div>
-      <div class="home-products__grid--chair-mount-cupsidors col-1-5">
-				<a href="<?php echo site_url('/products-category/chair-mount-cuspidors/'); ?>">
-          <h3 class="title__h3">Chair Mount Cupsidors</h3>
-        </a>
-      </div>
-      <div class="home-products__grid--assistant-arms col-1-5">
-				<a href="<?php echo site_url('/products-category/assistant-arms/'); ?>">
-          <h3 class="title__h3">Assistant Arms</h3>
-        </a>
-      </div>
-    </div>
+		<?php if( have_rows('products_grid') ): ?>
+			<div class="home-products__grid flex-grid">
+				<?php while ( have_rows('products_grid') ) : the_row(); ?>
+					<?php $term = get_sub_field('category'); ?>
+					<div class="home-products__grid-item col-1-5">
+		        <a href="<?php echo get_term_link($term); ?>">
+		          <h3 class="title__h3"><?php echo $term->name; ?></h3>
+		        </a>
+		      </div>
+				<?php endwhile; ?>
+			</div>
+		<?php endif; ?>
 
     <div class="home-products__footer">
       <p><a href="<?php the_field('products_section_button_link'); ?>" class="btn btn--outline"><?php the_field('products_section_button_label'); ?></a></p>
