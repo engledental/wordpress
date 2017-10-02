@@ -3,7 +3,7 @@
 <section class="products-hero">
   <div class="container container--narrow">
     <h1 class="title__h1">Our Products</h1>
-    <h2 class="title__h3">American Made, Designed and Manfactured in Hillsboro, Oregon.</p>
+    <h2 class="title__h3"><?php the_field('product_page_subtitle', 'options'); ?></p>
   </div>
 </section>
 
