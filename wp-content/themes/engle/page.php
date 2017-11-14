@@ -32,7 +32,7 @@
 					<div class="contact-links">
 						<ul>
 							<li><a href="/support/">Technical Support</a></li>
-							<li><a href="mailto:<?php the_field('email_address', 'options'); ?>">Send Us Feedback</a></li>
+							<li><a href="mailto:<?php the_field('email', 'options'); ?>">Send Us Feedback</a></li>
 						</ul>
 					</div>
 				</div>
