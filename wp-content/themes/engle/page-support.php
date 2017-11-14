@@ -51,6 +51,7 @@
 				Fax: <?php the_field('fax_number', 'options'); ?></p>
 				<p>Available <?php the_field('support_hours', 'options'); ?><br />
 				Monday-Friday</p>
+				<p><a href="<?php the_field('serial_number_document', 'options'); ?>" target="_blank"><?php the_field('serial_number_link_label', 'options'); ?></a></p>
 			</div>
 		</div>
 

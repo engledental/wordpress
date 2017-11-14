@@ -33,6 +33,7 @@
 						<ul>
 							<li><a href="/support/">Technical Support</a></li>
 							<li><a href="mailto:<?php the_field('email', 'options'); ?>">Send Us Feedback</a></li>
+							<li><a href="<?php the_field('serial_number_document', 'options'); ?>" target="_blank"><?php the_field('serial_number_link_label', 'options'); ?></a></li>
 						</ul>
 					</div>
 				</div>

@@ -179,10 +179,6 @@
 	}
 }
 
-.tech-support-grid__contact-info a {
-	color: white;
-}
-
 .tech-support-grid__contact-info p {
 	@include font-units(15px, 18px);
 	font-weight: $weight-bold;
@@ -191,4 +187,13 @@
 
 .tech-support-grid__contact-info p:not(:last-child) {
 	margin-bottom: 18px;
+}
+
+.tech-support-grid__contact-info a {
+	color: white;
+	border-bottom: 2px solid $turq;
+
+	&:hover {
+		border-bottom-color: transparent
+	}
 }

@@ -41,6 +41,44 @@
             "maxlength": ""
         },
         {
+            "key": "field_5a0af3e6b9697",
+            "label": "Serial Number Document",
+            "name": "serial_number_document",
+            "type": "file",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "url",
+            "library": "all",
+            "min_size": "",
+            "max_size": "",
+            "mime_types": ""
+        },
+        {
+            "key": "field_5a0af403b9698",
+            "label": "Serial Number Link Label",
+            "name": "serial_number_link_label",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
             "key": "field_598de671268a9",
             "label": "Contact Block Title",
             "name": "contact_block_title",
@@ -279,5 +317,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1506970707
+    "modified": 1510667302
 }
