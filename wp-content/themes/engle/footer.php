@@ -10,7 +10,8 @@
       <div class="footer-contact">
         <h4>Contact Us</h4>
 				<p class="footer-contact__address"><?php the_field('address', 'options'); ?>, <?php the_field('city', 'options'); ?>, <?php the_field('state', 'options'); ?> <?php the_field('zip', 'options'); ?></p>
-        <p class="footer-contact__phone"><?php the_field('phone_number', 'options'); ?></p>
+        <p class="footer-contact__phone"><?php the_field('toll_free_phone_number', 'options'); ?><br />
+					<?php the_field('phone_number', 'options'); ?></p>
 				<p class="footer-contact__email"><a href="mailto:<?php the_field('email', 'options'); ?>"><?php the_field('email', 'options'); ?></a></p>
         <div class="footer-social">
           <a href="<?php the_field('facebook_link', 'options'); ?>" target="_blank">
