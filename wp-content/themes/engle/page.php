@@ -18,7 +18,8 @@
 					<div class="contact-info-wrapper">
 						<h3><?php the_field('contact_block_title', 'options'); ?></h3>
 						<h4>Call Us</h4>
-						<p><?php the_field('phone_number', 'options'); ?></p>
+						<p><?php the_field('toll_free_phone_number', 'options'); ?><br />
+							<?php the_field('phone_number', 'options'); ?></p>
 
 						<h4>Email</h4>
 						<p><a href="mailto:<?php the_field('email', 'options'); ?>"><?php the_field('email', 'options'); ?></a></p>
