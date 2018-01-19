@@ -78,9 +78,12 @@
       </div>
     <?php endif; ?>
 
-    <div class="colors__footer">
-      <p><a href="<?php the_field('color_swatch_request_link'); ?>" class="btn btn--purple"><?php the_field('color_swatch_request_link_label'); ?></a></p>
-    </div>
+    <?php $color_request_link = get_field('color_swatch_request_link'); ?>
+    <?php if($color_request_link): ?>
+      <div class="colors__footer">
+        <p><a href="<?php the_field('color_swatch_request_link'); ?>" class="btn btn--purple"><?php the_field('color_swatch_request_link_label'); ?></a></p>
+      </div>
+    <?php endif; ?>
 
   </div>
 </section>
