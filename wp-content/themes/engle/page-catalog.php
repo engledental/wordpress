@@ -78,6 +78,10 @@
       </div>
     <?php endif; ?>
 
+    <div class="colors__footer">
+      <p><a href="<?php the_field('color_swatch_request_link'); ?>" class="btn btn--purple"><?php the_field('color_swatch_request_link_label'); ?></a></p>
+    </div>
+
   </div>
 </section>
 

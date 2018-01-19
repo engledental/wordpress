@@ -134,3 +134,7 @@
 	@include font-units(12px, 12px);
 	padding-top: 6px;
 }
+
+.colors__footer {
+	padding-top: $base*2;
+}
