@@ -1,0 +1,86 @@
+
+.modal {
+	display: none;
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	z-index: 30;
+}
+
+.modal__overlay {
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	background: rgba($purple, .75);
+}
+
+.modal__close {
+	z-index: 5;
+	background: $purple;
+
+	@include bp-max-width($medium) {
+		@include horizontal-center;
+		bottom: 10px;
+	}
+
+	@include bp-min-width($medium) {
+		position: absolute;
+		top: 20px;
+		right: 20px;
+	}
+}
+
+.modal__content {
+	position: relative;
+	width: 100%;
+	max-width: 560px;
+	padding: 18px 10px;
+	background: #fff;
+	text-align: center;
+
+	@include bp-min-width($small) {
+		@include absolute-center;
+		padding: 24px 20px;
+	}
+}
+
+.new-product-modal__title {
+	margin-bottom: 12px;
+
+	@include bp-min-width($medium) {
+		margin-bottom: $base;
+	}
+}
+
+.new-product-modal__image {
+	margin-bottom: 18px;
+}
+
+.new-product-modal__product-title {
+	@include font-size(24px);
+	margin-bottom: 12px;
+	font-style: italic;
+	font-weight: $weight-bold;
+	text-transform: uppercase;
+
+	@include bp-min-width($medium) {
+		@include font-size(30px);
+	}
+}
+
+.new-product-modal__product-subtitle {
+	margin-bottom: 18px;
+
+	@include bp-min-width($medium) {
+		@include font-size(21px);
+	}
+}
+
+.new-product-modal__product-cta .btn:hover {
+	color: $purple;
+}

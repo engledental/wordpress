@@ -33,6 +33,32 @@ jQuery(document).ready(function($) {
     });
   }
 
+  var popupModal = function() {
+    var modal = $('#modal');
+    var closeModal = $('.modal__close');
+    var modalContentLink = $('.modal__content a');
+    var firstSess = sessionStorage.getItem('modal');
+
+    closeModal.on('click', function(e) {
+      e.preventDefault();
+      modal.hide();
+      sessionStorage.setItem('modal', 'close');
+      $('body').removeClass('js-no-scroll');
+    });
+
+    modalContentLink.on('click', function(e) {
+      sessionStorage.setItem('modal', 'close');
+      $('body').removeClass('js-no-scroll');
+    });
+
+    if(firstSess == 'close') {
+      modal.hide();
+    } else {
+      modal.show();
+      $('body').addClass('js-no-scroll');
+    }
+  }
+
   $('#hero-slider').slick({
     dots: true,
     infinite: true,
@@ -49,5 +75,6 @@ jQuery(document).ready(function($) {
 
   scrollPageTop();
   mobileNav();
+  popupModal();
 
 });

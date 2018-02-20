@@ -28,12 +28,14 @@
 
       </div>
       <div class="footer-copyright">
-        <p>&copy; Copyright 2017. All Rights Reserved.</p>
+        <p>&copy; Copyright <?php echo date('Y'); ?>. All Rights Reserved.</p>
       </div>
     </div>
   </footer>
 
   <a href="" id="scroll-top" class="scroll-top">&uarr;</a>
+
+	<?php get_template_part( 'partials/home-modal' ); ?>
 
 	<?php wp_footer(); ?>
 </body>
