@@ -36,6 +36,7 @@ jQuery(document).ready(function($) {
   var popupModal = function() {
     var modal = $('#modal');
     var closeModal = $('.modal__close');
+    var modalOverlay = $('.modal__overlay');
     var modalContentLink = $('.modal__content a');
     var firstSess = sessionStorage.getItem('modal');
 
@@ -47,6 +48,13 @@ jQuery(document).ready(function($) {
     });
 
     modalContentLink.on('click', function(e) {
+      sessionStorage.setItem('modal', 'close');
+      $('body').removeClass('js-no-scroll');
+    });
+
+    modalOverlay.on('click', function(e) {
+      e.preventDefault();
+      modal.hide();
       sessionStorage.setItem('modal', 'close');
       $('body').removeClass('js-no-scroll');
     });
