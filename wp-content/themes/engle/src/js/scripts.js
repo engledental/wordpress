@@ -62,7 +62,7 @@ jQuery(document).ready(function($) {
     if(firstSess == 'close') {
       modal.hide();
     } else {
-      modal.show();
+      modal.fadeIn('swing');
       $('body').addClass('js-no-scroll');
     }
   }
