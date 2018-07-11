@@ -181,8 +181,8 @@ add_image_size( 'catalog-cover-2x', 1146, 1480 );
 add_image_size( 'upholstery-thumb', 573, 377, true );
 add_image_size( 'upholstery-thumb-2x', 1146, 754, true );
 
-add_image_size( 'color-thumb', 186, 186, true );
-add_image_size( 'color-thumb-2x', 372, 372, true );
+add_image_size( 'color-thumb', 194, 194, true );
+add_image_size( 'color-thumb-2x', 388, 388, true );
 
 add_image_size( 'hero-bg', 1000, 562, true );
 add_image_size( 'hero-bg-2x', 2000, 1124, true );
