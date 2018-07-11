@@ -83,6 +83,6 @@ jQuery(document).ready(function($) {
 
   scrollPageTop();
   mobileNav();
-  popupModal();
+  //popupModal();
 
 });

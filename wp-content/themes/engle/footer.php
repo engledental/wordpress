@@ -35,7 +35,7 @@
 
   <a href="" id="scroll-top" class="scroll-top">&uarr;</a>
 
-	<?php get_template_part( 'partials/home-modal' ); ?>
+	<?php // get_template_part( 'partials/home-modal' ); ?>
 
 	<?php wp_footer(); ?>
 </body>
