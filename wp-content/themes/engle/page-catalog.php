@@ -88,34 +88,34 @@
   </div>
 </section>
 
-<section class="vinyl">
-  <div class="container">
-    <h2 class="swatch__title title__h2"><?php the_field('vinyl_section_title'); ?></h2>
+<?php if( have_rows('vinyl_options') ): ?>
+  <section class="vinyl">
+    <div class="container">
+      <h2 class="swatch__title title__h2"><?php the_field('vinyl_section_title'); ?></h2>
 
-    <?php if( have_rows('vinyl_options') ): ?>
-      <div class="swatch-grid">
-        <?php while ( have_rows('vinyl_options') ) : the_row(); ?>
-          <div class="swatch-grid__item">
-            <?php
-              $image_id = get_sub_field('image');
-              $src = wp_get_attachment_image_src($image_id, 'color-thumb');
-              $srcset = wp_get_attachment_image_srcset($image_id, 'color-thumb');
-            ?>
-            <img src="<?=$src[0]?>" srcset="<?=$srcset?>" alt="<?php the_sub_field('title'); ?>" />
-            <h3 class="swatch-grid__item-title"><?php the_sub_field('title'); ?></h3>
-          </div>
-        <?php endwhile; ?>
-      </div>
-    <?php endif; ?>
+        <div class="swatch-grid">
+          <?php while ( have_rows('vinyl_options') ) : the_row(); ?>
+            <div class="swatch-grid__item">
+              <?php
+                $image_id = get_sub_field('image');
+                $src = wp_get_attachment_image_src($image_id, 'color-thumb');
+                $srcset = wp_get_attachment_image_srcset($image_id, 'color-thumb');
+              ?>
+              <img src="<?=$src[0]?>" srcset="<?=$srcset?>" alt="<?php the_sub_field('title'); ?>" />
+              <h3 class="swatch-grid__item-title"><?php the_sub_field('title'); ?></h3>
+            </div>
+          <?php endwhile; ?>
+        </div>
 
-    <?php $vinyl_request_link = get_field('vinyl_request_link'); ?>
-    <?php if($vinyl_request_link): ?>
-      <div class="swatch__footer">
-        <p><a href="<?php echo $vinyl_request_link; ?>" class="btn btn--purple"><?php the_field('vinyl_request_link_label'); ?></a></p>
-      </div>
-    <?php endif; ?>
+      <?php $vinyl_request_link = get_field('vinyl_request_link'); ?>
+      <?php if($vinyl_request_link): ?>
+        <div class="swatch__footer">
+          <p><a href="<?php echo $vinyl_request_link; ?>" class="btn btn--purple"><?php the_field('vinyl_request_link_label'); ?></a></p>
+        </div>
+      <?php endif; ?>
 
-  </div>
-</section>
+    </div>
+  </section>
+<?php endif; ?>
 
 <?php get_footer(); ?>
