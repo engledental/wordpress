@@ -274,7 +274,7 @@
             "key": "field_5a61dc51e170d",
             "label": "Color Swatch Request Link",
             "name": "color_swatch_request_link",
-            "type": "link",
+            "type": "page_link",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -283,7 +283,11 @@
                 "class": "",
                 "id": ""
             },
-            "return_format": "url"
+            "post_type": [],
+            "taxonomy": [],
+            "allow_null": 0,
+            "allow_archives": 1,
+            "multiple": 0
         },
         {
             "key": "field_5a61dc73e170e",
@@ -386,6 +390,44 @@
                     "mime_types": ""
                 }
             ]
+        },
+        {
+            "key": "field_5b46f4c4f70a8",
+            "label": "Vinyl Request Link",
+            "name": "vinyl_request_link",
+            "type": "page_link",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "post_type": [],
+            "taxonomy": [],
+            "allow_null": 0,
+            "allow_archives": 1,
+            "multiple": 0
+        },
+        {
+            "key": "field_5b46f503f70a9",
+            "label": "Vinyl Request Link Label",
+            "name": "vinyl_request_link_label",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
         }
     ],
     "location": [
@@ -407,5 +449,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1531291063
+    "modified": 1531376927
 }

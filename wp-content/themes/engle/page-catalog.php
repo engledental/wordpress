@@ -108,6 +108,13 @@
       </div>
     <?php endif; ?>
 
+    <?php $vinyl_request_link = get_field('vinyl_request_link'); ?>
+    <?php if($vinyl_request_link): ?>
+      <div class="swatch__footer">
+        <p><a href="<?php echo $vinyl_request_link; ?>" class="btn btn--purple"><?php the_field('vinyl_request_link_label'); ?></a></p>
+      </div>
+    <?php endif; ?>
+
   </div>
 </section>
 
